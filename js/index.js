@@ -49,6 +49,10 @@ $('.more').on('click', function(){
     }
 });
 
+$(document).ready(function() {
+	$('.callout-mexico').fadeIn(500)
+});
+
 /**
  * Question 3:
  * If a user clicks "Read Less":
