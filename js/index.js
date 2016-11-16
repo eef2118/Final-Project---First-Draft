@@ -1,90 +1,196 @@
 
-//SECTION 1: REPLACE THE SECTIONS THAT SAY REPLACE ME WITH THE CORRECT CODE.
-/**
- * Part 1:
- * On clicking of the 'Sign Up' button:
- * Display an alert that says "We are not currently taking sign ups"
- * Then change hte text of the button to say: "No Sign Ups!"
- */
 
 	$('.button2').on('click', function(){
-      window.alert("We are not taking sign ups");
-      $('.button2').text('No Sign Ups!');
+      $('.button2').text('Thank you!');
 
       });
 
-/**
- * Question 2:
- * If a user clicks "Read More":
- * Have the extra <p> tag slide down along with a "Read Less" link in the blog post using
- * $.slideDown() and $.show()
- */
+$(document).ready(function(){
+	$("h1").slideDown(1000)
+	.fadeIn(800);
+});
 
-var moreOpen1 = false;
-var moreOpen2 = false;
 
-$('.more').on('click', function(){
-	if (moreOpen1 === false) {
-		$('#second').slideDown();
-		$('.more').text("Read less");
-		moreOpen1 = true;
-	}
-    else {
-    	$('#second').slideUp();
-		$('.more').text("Read more");
-		moreOpen1 = false;
+var winH = $(window).height();
+var mapSection = $(".map");
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".callout-mexico")
+       .animate({
+			"opacity":".9"
+		},1500
+);  
     }
-});
+  });
 
-$('.more').on('click', function(){
-	if (moreOpen2 === false) {
-		$('#second').slideDown();
-		$('.more').text("Read less");
-		moreOpen1 = true;
-	}
-    else {
-    	$('#second').slideUp();
-		$('.more').text("Read more");
-		moreOpen2 = false;
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".callout-brazil")
+       .animate({
+			"opacity":".9"
+		},1500
+);  
     }
-});
+  });
 
-$(document).ready(function() {
-	$('.callout-mexico').fadeIn(500)
-});
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".callout-colombia")
+       .animate({
+			"opacity":".9"
+		},1500
+);  
+    }
+  });
 
-/**
- * Question 3:
- * If a user clicks "Read Less":
- * Have the extra <p> slide up and hide the "Read Less" link using $.slideUp() and $.hide()
- * Show the "Read More" link using $.show()
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".callout-argentina")
+       .animate({
+			"opacity":".9"
+		},1500
+);  
+    }
+  });
 
- */
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".callout-chile")
+       .animate({
+			"opacity":".9"
+		},1500
+);  
+    }
+  });
+
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".callout-peru")
+       .animate({
+			"opacity":".9"
+		},1500
+);  
+    }
+  });
 
 
-/**
- * Question 4:
- * Do something similar with the About text in the side bar using “Learn more”.
- * Have the extra <p> tag slide down along with a "Do Not Learn" link in the blog post using
- * $.slideDown() and $.show()
- * Hide the "Learn More" link using $.hide()
- */
-	$('#learn').on('click', function(){
-		$('p-sidebar').slideDown(600);
-		$('a').show('<a href="#">Do Not Learn</a>').addClass('.none');
-		$('#learn').hide();
-});
-/**
- * Question 5:
-* If a user clicks "Do Not Learn":
- * Have the extra <p> slide up and hide the "Do Not Learn" link using $.slideUp() and $.hide()
- * Show the "Read More" link using $.show()
- */
-	$('.less').on('click', function(){
-		$('p-sidebar').slideUp(600);
-		$('.none').hide();
-		$('#learn').show();
-});
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".box-1")
+       .animate({
+			"left":"545px",
+			"opacity":".9"
+		},1150
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".brazil-circle")
+       .animate({
+			"left":"60%",
+			"opacity":".9"
+		},1150
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".box-2")
+       .animate({
+			"left":"540px",
+			"opacity":".9"
+		},1250
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".mexico-circle")
+       .animate({
+			"left":"60.5%",
+			"opacity":".9"
+		},1250
+);  
+    }
+  });$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".box-3")
+       .animate({
+			"left":"550px",
+			"opacity":".9"
+		},1350
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".argentina-circle")
+       .animate({
+			"left":"60.75%",
+			"opacity":".9"
+		},1350
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".box-4")
+       .animate({
+			"left":"545px",
+			"opacity":".9"
+		},1450
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".colombia-circle")
+       .animate({
+			"left":"61.5%",
+			"opacity":".9"
+		},1450
+);  
+    }
+  });
+
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".box-5")
+       .animate({
+			"left":"545px",
+			"opacity":".9"
+		},1500
+);  
+    }
+  });
+$(window).on("scroll", function(){
+      var rect = mapSection[0].getBoundingClientRect();
+      if (rect.top < (winH / 2)) {
+       $(".chile-circle")
+       .animate({
+			"left":"61.7%",
+			"opacity":".9"
+		},1500
+);  
+    }
+  });
+
 
 
 
