@@ -24,10 +24,10 @@
 				<a href="index.html"><img src="images/highlights.png" class="company">
 					<nav>
 					<ul>
-						<li>Mid-Year Data</li>
-						<li><a href="https://lavca.org/accelerator-directory/">Accelerator Directory</a></li>
-						<li><a href="https://lavca.org/vc">LatAm VC</a></li>
-						<li><a href="https://lavca.org/">LAVCA</a></li>
+						
+						<li><a href="https://lavca.org/industry-data/2016-mid-year-data-analysis/" target="_blank">Purchase Mid-Year Data</a></li>
+						<li><a href="https://lavca.org/vc" target="_blank">LatAm VC</a></li>
+						<li><a href="https://lavca.org/" target="_blank">LAVCA</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -35,7 +35,7 @@
 
 			
 			<div class="box">
-			<div class="report"><img src="images/lavcawhite.png" width="100px"><h1>INVESTMENT TREND WATCH: MID-YEAR VC ANALYSIS</h1>Report 2016</div>
+			<div class="report"><img src="images/lavcawhite.png" width="100px" class="lavca"><h1>INVESTMENT TREND WATCH: MID-YEAR VC ANALYSIS</h1><div class="other">Mid-Year Data Report 2016</div></div>
 				<section><br><p>Venture investments in Latin America continue to climb, despite the economic uncertainty in Brazil, the region’s leading venture market. VC transactions in Latin America are up 46% year over year, with US$218m deployed across 104 transactions in 1H2016, according to LAVCA’s 2016 Mid-Year Data & Analysis. And 2015 in turn was a banner year for venture investments in the region, with US$594m deployed over 182 deals. A few investment trends we are following:</p>
 				</section>
 				<section>
@@ -62,17 +62,17 @@
 			<div class="map">
 			<div class="latam">
 			    <div class="mexico-box"><b>US$60m</b> invested<br><b>29%↑</b> in $ of deals<br><b>45%↑</b> in # of deals <div class="arrow-down"></div></div>
-				<span><div class="callout-mexico">47</div></span>
+				<span><div class="callout callout-mexico" data-box="mexico-box">47</div></span>
 				<div class="colombia-box"><b>US$13</b> invested<br><b>6%↑</b> in $ of deals<br><b>6%↑</b> in # of deals <div class="arrow-down"></div></div>
-				<div class="callout-colombia">6</div>
+				<div class="callout callout-colombia" data-box="colombia-box">6</div>
 				<div class="brazil-box"><b>US$110m</b> invested<br><b>51%↑</b> in $ of deals<br><b>29%↑</b> in # of deals <div class="arrow-down"></div></div>
-				<div class="callout-brazil">30</div>
+				<div class="callout callout-brazil" data-box="brazil-box">30</div>
 				<div class="chile-box"><b>US$2m</b> invested<br><b>1%↑</b> in $ of deals<br><b>3%↑</b> in # of deals <div class="arrow-down"></div></div>
-				<div class="callout-chile">3</div>
+				<div class="callout callout-chile" data-box="chile-box">3</div>
 				<div class="peru-box"><b>1%↑</b> in # of deals <div class="arrow-down"></div></div>
-				<div class="callout-peru">7</div>
+				<div class="callout callout-peru" data-box="peru-box">7</div>
 				<div class="argentina-box"><b>US$18m</b> invested<br><b>8%↑</b> in $ of deals<br><b>16%↑</b> in # of deals <div class="arrow-down"></div></div>
-				<div class="callout-argentina">17</div>
+				<div class="callout callout-argentina" data-box="argentina-box">17</div>
 
 			</div>
 	
@@ -127,29 +127,33 @@
 
 <div class="lowersection"><div>
 <div class="button2" id="myBtn">Subscribe to the LatAm Venture Bulletin</div>
-<!-- The Modal -->
+
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">×</span>
     <!--Data colection elements-->
-    <form>
+    <form action="http://code.kimgoulbourne.com/mailto/send_email.php" method="post" target="form-success">
+    <input type="hidden" name="to_email" value="elisabeth.fabila@gmail.com" />
+    <input type="hidden" name="to_name" value="Elisabeth Soto" />
     	<label for="firstname">First Name</label>
     	<input type="text" name="firstname" id="firstname">
-    	<label for="lastname">First Name</label>
+    	<label for="lastname">Last Name</label>
     	<input type="text" name="lastname" id="lastname">
     	<label for="email">Email</label>
-    	<input type="email" name="email" id="email">
+    	<input type="email" name="from_email" id="email">
     	<label for="company">Company</label>
-    	<input type="text" name="company" id="company name">
-    	<label for="type">Company Type</label>
-    	<select name="dropdown">
-    		<option value="Option 1">GP Fund Manager</option>
-    		<option value="Option 2">Limited Partner</option>
-    		<option value="Option 3">Other</option>
-    	</select>
+    	<input type="text" name="company" id="company">
+    	<label for="gp-fund">GP Fund Manager</label>
+    	<input type="radio" name="company-type" value="GP Fund Manager" id="gp-fund">
+    	<label for="limited-partner">Limited Partner</label>
+    	<input type="radio" name="company-type" value="Limited Partner" id="limited-partner">
+    	<label for="other">Other</label>
+    	<input type="radio" name="company-type" value="GP Fund Manager" id="other">
+    	<button type="submit" class="submitbtn">Submit</button>
     </form>
+    <iframe name="form-success" width="0" height="0" style="display:none"></iframe>
   </div>
 
 </div>
