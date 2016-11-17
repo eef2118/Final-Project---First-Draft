@@ -98,6 +98,85 @@ $(window).on("scroll", function(){
 	}
 });
 
+var winH = $(window).height();
+var mapSection = $(".map");
+$(window).on("scroll", function(){
+	var rect = mapSection[0].getBoundingClientRect();
+	if ((rect.top < (winH / 1)) && 
+		$(window).width() > 1280)
+	{
+		$(".callout").animate({
+			"opacity":".9"
+		},1500);  
+		// $(".callout-mexico").animate({
+		// 	"opacity":".9"
+		// },1500);  
+		// $(".callout-brazil").animate({
+		// 	"opacity":".9"
+		// },1500);  
+		// $(".callout-argentina").animate({
+		// 	"opacity":".9"
+		// },1500);  
+		// $(".callout-colombia").animate({
+		// 	"opacity":".9"
+		// },1500);  
+		// $(".callout-chile").animate({
+		// 	"opacity":".9"
+		// },1500); 
+		// $(".callout-peru").animate({
+		// 	"opacity":".9"
+		// },1500);   
+		$(".box-1").animate({
+			"left":"60.5%",
+			"opacity":".9"
+		},1350);  
+		$(".brazil-circle").animate({
+			"left":"60%",
+			"opacity":".9"
+		},1350);
+		$(".box-2").animate({
+			"left":"61%",
+			"opacity":".9"
+		},1650);  
+		$(".mexico-circle").animate({
+			"left":"60.5%",
+			"opacity":".9"
+		},1650);  
+		$(".box-3").animate({
+			"left":"60.75%",
+			"opacity":".9"
+		},1850);  
+		$(".argentina-circle").animate({
+			"left":"60.75%",
+			"opacity":".9"
+		},1850);  
+		$(".box-4").animate({
+			"left":"62%",
+			"opacity":".9"
+		},1950);  
+		$(".colombia-circle").animate({
+			"left":"61.5%",
+			"opacity":".9"
+		},1950);  
+		$(".box-5").animate({
+			"left":"62%",
+			"opacity":".9"
+		},2150);  
+		$(".chile-circle").animate({
+			"left":"61.7%",
+			"opacity":".9"
+		},2150);
+		$(".amount-box").animate({
+			"left":"",
+			"opacity":"1"
+		},2550);
+		$(".number-box").animate({
+			"right":"",
+			"opacity":"1"
+		},2550);
+	}
+});
+
 		
 var modal = document.getElementById('myModal');
 
